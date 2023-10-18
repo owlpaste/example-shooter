@@ -6,30 +6,23 @@
 [ext_resource type="Texture2D" uid="uid://dmcu11pyaiip1" path="res://graphics/objects/lid.png" id="4_ve4id"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_maerv"]
-radius = 87.0
-height = 248.0
+radius = 71.0
+height = 184.0
 
 [node name="Toilet" instance=ExtResource("1_c5sfx")]
 script = ExtResource("2_lqixb")
 
 [node name="BaseSprite" parent="." index="0"]
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_iwccw")
 
 [node name="LidSprite" parent="." index="1"]
 position = Vector2(0, 30)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_ve4id")
 
 [node name="CollisionShape2D" parent="." index="2"]
 shape = SubResource("CapsuleShape2D_maerv")
 
 [node name="Marker2D" parent="SpawnPositions" index="0"]
-position = Vector2(-17, 43)
-
-[node name="Marker2D2" type="Marker2D" parent="SpawnPositions" index="1"]
-position = Vector2(-43, 9)
-
-[node name="Marker2D3" type="Marker2D" parent="SpawnPositions" index="2"]
-position = Vector2(21, 39)
-
-[node name="Marker2D4" type="Marker2D" parent="SpawnPositions" index="3"]
-position = Vector2(47, -5)
+position = Vector2(-2, -1)

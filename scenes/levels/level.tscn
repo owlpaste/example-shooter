@@ -7,13 +7,19 @@
 [node name="Level" type="Node2D"]
 script = ExtResource("1_tm503")
 
+[node name="Decals" type="Node2D" parent="."]
+
 [node name="Ground" type="Node2D" parent="."]
+
+[node name="Infestation" type="Node2D" parent="."]
 
 [node name="Items" type="Node2D" parent="."]
 
 [node name="Projectiles" type="Node2D" parent="."]
 position = Vector2(0, -1)
 metadata/_edit_lock_ = true
+
+[node name="Enemies" type="Node2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("3_f1x3k")]
 position = Vector2(412, 859)

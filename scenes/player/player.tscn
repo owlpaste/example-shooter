@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bf4busgnxomjy" path="res://graphics/decals/white.png" id="3_a65bg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_724cm"]
-radius = 63.6396
+radius = 50.04
 
 [sub_resource type="Gradient" id="Gradient_6nr1e"]
 colors = PackedColorArray(0.117647, 1, 1, 0.666667, 0.54902, 1, 1, 0.666667)
@@ -29,7 +29,7 @@ color_ramp = SubResource("GradientTexture1D_wi7h4")
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ixybk"]
 polygon = PackedVector2Array(-55, -27, -61, -12, -58, 1, -55, 13, -49, 24, -44, 35, -40, 43, -36, 49, -32, 56, -21, 60, -7, 60, 11, 58, 23, 51, 33, 47, 41, 45, 52, 42, 69, 41, 57, 45, 60, 51, 73, 54, 90, 55, 97, 55, 95, 46, 103, 43, 110, 36, 120, 36, 121, 32, 129, 31, 136, 25, 132, 15, 130, 6, 123, 11, 123, 2, 114, 4, 110, -3, 96, -3, 91, -9, 80, -9, 72, -8, 62, -25, 50, -27, 44, -39, 36, -49, 26, -60, 10, -59, -2, -58, -12, -53, -15, -56, -24, -50, -28, -45, -32, -44, -39, -45, -48, -43, -51, -37)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Entity"]]
 collision_mask = 31
 script = ExtResource("1_8yo55")
 
@@ -63,10 +63,10 @@ position = Vector2(129, 29)
 [node name="GrenadeStartPositions" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="GrenadeStartPositions"]
-position = Vector2(126, 17)
+position = Vector2(131, 17)
 
 [node name="Marker2D2" type="Marker2D" parent="GrenadeStartPositions"]
-position = Vector2(126, 25)
+position = Vector2(131, 25)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(131, 23)
