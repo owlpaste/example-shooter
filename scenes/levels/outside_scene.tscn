@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b0r4yur10m0b0"]
+[gd_scene load_steps=23 format=3 uid="uid://b0r4yur10m0b0"]
 
 [ext_resource type="PackedScene" uid="uid://hy8qmb3jg1xw" path="res://scenes/levels/level.tscn" id="1_is35e"]
 [ext_resource type="Texture2D" uid="uid://c6hc8hgjj61eo" path="res://graphics/ground/stones.png" id="2_k82mc"]
@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://b6ln1yu72yyka" path="res://scenes/objects/gate.tscn" id="14_k4mqq"]
 [ext_resource type="PackedScene" uid="uid://dsymi2pyj42de" path="res://scenes/container/crate.tscn" id="16_kx55b"]
 [ext_resource type="PackedScene" uid="uid://b4ci812ghtiat" path="res://scenes/Items/item.tscn" id="16_p3qb4"]
-[ext_resource type="PackedScene" uid="uid://bjijs07jcqsa" path="res://scenes/enemies/scout.tscn" id="17_c1ppt"]
+[ext_resource type="PackedScene" uid="uid://dy2ctj5tj4lf0" path="res://scenes/enemies/car.tscn" id="18_xv1qo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_be3kv"]
 resource_name = "walls"
@@ -52,6 +52,12 @@ texture_region_size = Vector2i(390, 390)
 tile_size = Vector2i(390, 390)
 sources/0 = SubResource("TileSetAtlasSource_be3kv")
 sources/1 = SubResource("TileSetAtlasSource_snph7")
+
+[sub_resource type="Curve2D" id="Curve2D_0adcl"]
+_data = {
+"points": PackedVector2Array(997.857, -141.111, -997.857, 141.111, 3012, 1247, 0, 0, 0, 0, 1836, 3079, -332.619, -216.706, 332.619, 216.706, 2411, 4624, -307.421, 146.151, 307.421, -146.151, 4727, 4678, -347.738, 277.183, 347.738, -277.183, 9720, 4606, 443.492, 423.333, -443.492, -423.333, 10690, 1553, 216.706, -398.135, -216.706, 398.135, 8876, 1678, 362.857, -161.27, -362.857, 161.27, 7915, 3717, 211.667, 131.032, -211.667, -131.032, 3793, 3492, 892.024, 307.421, -892.024, -307.421, 3012, 1247)
+}
+point_count = 10
 
 [node name="OutsideScene" instance=ExtResource("1_is35e")]
 script = ExtResource("2_w72pb")
@@ -135,10 +141,15 @@ rotation = -2.13127
 [node name="Item" parent="." index="6" instance=ExtResource("16_p3qb4")]
 position = Vector2(1377, 622)
 
-[node name="Scout" parent="Enemies" index="0" instance=ExtResource("17_c1ppt")]
-position = Vector2(2248, 1794)
+[node name="CatPath" type="Path2D" parent="." index="8"]
+position = Vector2(-150, 343)
+curve = SubResource("Curve2D_0adcl")
 
-[node name="Player" parent="." index="8"]
+[node name="Car" parent="CatPath" index="0" instance=ExtResource("18_xv1qo")]
+position = Vector2(3012, 1247)
+rotation = 3.00111
+
+[node name="Player" parent="." index="9"]
 z_index = 2
 position = Vector2(604, 402)
 
